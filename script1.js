@@ -1,17 +1,19 @@
 document.addEventListener("DOMContentLoaded", function() {
-    let introScreen = document.getElementById("intro-screen");
+    let startScreen = document.getElementById("start-screen");
     let valentineScreen = document.getElementById("valentine-screen");
     let winScreen = document.getElementById("win-screen");
     let loseScreen = document.getElementById("lose-screen");
     let bgMusic = document.getElementById("bg-music");
-    let winSound = document.getElementById("win-sound");
-    let loseSound = document.getElementById("lose-sound");
+    let voiceStart = document.getElementById("voice-start");
+    let voiceWin = document.getElementById("voice-win");
+    let voiceLose = document.getElementById("voice-lose");
 
     // Click to Start
-    introScreen.addEventListener("click", function() {
-        introScreen.classList.add("hidden");
+    startScreen.addEventListener("click", function() {
+        startScreen.classList.add("hidden");
         valentineScreen.classList.remove("hidden");
         bgMusic.play();
+        voiceStart.play();
     });
 
     // Yes Button (Win)
@@ -19,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
         valentineScreen.classList.add("hidden");
         winScreen.classList.remove("hidden");
         bgMusic.pause();
-        winSound.play();
+        voiceWin.play();
     });
 
     // No Button (Lose)
@@ -27,6 +29,9 @@ document.addEventListener("DOMContentLoaded", function() {
         valentineScreen.classList.add("hidden");
         loseScreen.classList.remove("hidden");
         bgMusic.pause();
-        loseSound.play();
+        voiceLose.play();
     });
 });
+
+
+ 
