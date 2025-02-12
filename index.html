@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tekken Valentine</title>
+    <link rel="stylesheet" href="style1.css">
+    <script defer src="script1.js"></script>
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="bg-video.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Arcade Start Screen -->
+    <div id="start-screen">
+        <h1 class="title">HAPPY VALENTINE'S REL </h1>
+        <p class="start">PRESS START</p>
+    </div>
+
+    <!-- Valentine Choice Screen (Hidden Initially) -->
+    <div id="valentine-screen" class="hidden">
+        <p class="question">Do you want to be my Valentine?</p>
+        <button id="yes-btn">YES ❤️</button>
+        <button id="no-btn">NO 💔</button>
+    </div>
+
+    <!-- Winning Screen (Hidden Initially) -->
+    <div id="win-screen" class="hidden">
+        <p class="win-text">I LOVE YOU RELREL KO❤️</p>
+        <p class="win-animate">YOU WIN!</p>
+    </div>
+
+    <!-- Losing Screen (Hidden Initially) -->
+    <div id="lose-screen" class="hidden">
+       
+        <p class="lose-text">YOU LOSE REL HMPPH!</p>
+    </div>
+
+    <!-- Background Music & Voice Overs -->
+    <audio id="bg-music" loop>
+        <source src="tekken-theme.mp3" type="audio/mp3">
+    </audio>
+    <audio id="voice-start">
+        <source src="tekken-press-start.mp3" type="audio/mp3">
+    </audio>
+    <audio id="voice-win">
+        <source src="tekken-you-win.mp3" type="audio/mp3">
+    </audio>
+    <audio id="voice-lose">
+        <source src="tekken-you-lose.mp3" type="audio/mp3">
+    </audio>
+
+</body>
+</html>
